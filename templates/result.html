@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div>
+        <center>
+            <h1> Student Registeration Form</h1>
+
+            <table border="1" cellpadding="5" cellspacing="5">
+                <tr>
+                    <th>Firstanme</th>
+                    <th>Middlename</th>
+                    <th>Lastname</th>
+                    <th>CourseName</th>
+                    <th>Gender</th>
+                    <th>Mobile No</th>
+                    <th>Current Address</th>
+                </tr>
+                {% for row in data %}
+                <tr>
+                    {% for d in row %}
+                    <td>{{ d }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+            <div>
+                <br />
+                <form action="{{ url_for('index') }}">
+                    <button type="submit" class="registerbtn">Add New</button>
+                </form>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>

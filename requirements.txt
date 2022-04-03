@@ -1,0 +1,4 @@
+flask
+flask_mysqldb
+
+##pip install -r requirements.txt
